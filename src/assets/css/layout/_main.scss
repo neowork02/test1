@@ -1,0 +1,58 @@
+// all wrap
+.layer-wrap {
+  @include flex($d: column);
+  position: relative;
+  min-width: $min-width;
+  height: 100%;
+}
+
+// contents
+.layer-contents {
+  @include flex;
+  position: relative;
+  flex: 1;
+}
+
+.sample-wrap {
+  background-color: var(--bg-form);
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid var(--border-light);
+}
+.sample-cont {
+  @include list-space(30, $x: "bottom");
+
+  .sample-tit {
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.596);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & > strong {
+      span {
+        color: $high-blue3;
+      }
+    }
+    & > span {
+      color: $high-red;
+
+      &::before {
+        content: "|";
+        display: inline-block;
+        margin: 0 10px;
+        color: #ddd;
+      }
+
+      span {
+        color: $high-green;
+      }
+    }
+  }
+}
+
+.code-mirror-wrap {
+  margin: 10px 0;
+}

@@ -1,0 +1,28 @@
+{
+	"dataList":[
+		{
+			"content_id": "1",
+			"created_date": "2019-01-01 13:11:42",
+			"title": "타이틀01",
+			"content": "내용01",
+			"file_name": "abc001.jpg",
+			"send_yn": "Y"
+		},
+		{
+			"content_id": "2",
+			"created_date": "2019-01-02 13:11:42",
+			"title": "타이틀02",
+			"content": "내용02",
+			"file_name": "abc002.jpg",
+			"send_yn": "N"
+		},
+		{
+			"content_id": "3",
+			"created_date": "2019-01-03 13:11:42",
+			"title": "타이틀03",
+			"content": "내용03",
+			"file_name": "abc003.jpg",
+			"send_yn": "Y"
+		}
+	]
+}

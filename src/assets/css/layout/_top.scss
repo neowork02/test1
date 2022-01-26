@@ -1,0 +1,76 @@
+.header-wrap {
+  .header-inner {
+    @include flex-between-c;
+    background-color: $header;
+    height: 50px;
+    padding: 0 20px;
+
+    & > div {
+      @include flex-s-c;
+    }
+  }
+}
+
+.header-logo {
+  min-width: 120px;
+  font-size: $depth3;
+  color: $light-body;
+}
+
+.header-nav {
+  ul {
+    @include flex;
+  }
+  &,
+  a {
+    color: $light-txt-grey;
+  }
+
+  li {
+    @include list-space(40);
+
+    a {
+      color: $dark-txt;
+
+      &.active {
+        color: $high-green;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.select-arrow {
+  @include icon(after, 12, 6, $icon + "arrow_select.png", 8);
+  color: $light-body;
+  font-weight: 700;
+
+  &::after {
+    transition: all 0.2s;
+  }
+  &.on {
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+// header right
+.menu-group-wrap {
+  @include flex-s-c;
+  margin-left: 40px;
+
+  .icon {
+    @include list-space(15);
+    position: relative;
+
+    .icon {
+      margin: 0;
+    }
+  }
+  a,
+  button,
+  i {
+    cursor: pointer;
+  }
+}

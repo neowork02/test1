@@ -1,0 +1,170 @@
+{
+  "sampleMenuList": [
+    {
+      "name": "Layout",
+      "url": "/sample/layout",
+      "subMenuList": [
+        {
+          "name": "Basic Layout01",
+          "url": "/sample/layout/layout01"
+        },
+        {
+          "name": "Basic Layout02",
+          "url": "/sample/layout/layout02"
+        },
+        {
+          "name": "Basic Layout03",
+          "url": "/sample/layout/layout03"
+        }
+      ]
+    },
+    {
+      "name": "Button01",
+      "url": "/sample/button",
+      "subMenuList": [
+        {
+          "name": "Basic Button",
+          "url": "/sample/button/button01"
+        }
+      ]
+    },
+    {
+      "name": "Checkbox01",
+      "url": "/sample/checkbox",
+      "subMenuList": [
+        {
+          "name": "Basic Check Box",
+          "url": "/sample/checkbox/checkbox01"
+        }
+      ]
+    },
+    {
+      "name": "Radio01",
+      "url": "/sample/radio",
+      "subMenuList": [
+        {
+          "name": "Basic Radio Button",
+          "url": "/sample/radio/radio01"
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "url": "/sample/select",
+      "subMenuList": [
+        {
+          "name": "Basic Select Box",
+          "url": "/sample/select/select01"
+        }
+      ]
+    },
+    {
+      "name": "Input01",
+      "url": "/sample/input",
+      "subMenuList": [
+        {
+          "name": "Basic Input",
+          "url": "/sample/input/input01"
+        }
+      ]
+    },
+    {
+      "name": "Modal",
+      "url": "/sample/modal",
+      "subMenuList": [
+        {
+          "name": "Basic Modal",
+          "url": "/sample/modal/modal01"
+        }
+      ]
+    },
+    {
+      "name": "Picker",
+      "url": "/sample/picker",
+      "subMenuList": [
+        {
+          "name": "Basic Date Picker",
+          "url": "/sample/picker/picker01"
+        },
+        {
+          "name": "Basic Time Picker",
+          "url": "/sample/picker/picker02"
+        }
+      ]
+    },
+    {
+      "name": "Tree",
+      "url": "/sample/tree",
+      "subMenuList": [
+        {
+          "name": "Basic Tree",
+          "url": "/sample/tree/tree01"
+        }
+      ]
+    },
+    {
+      "name": "Paging",
+      "url": "/sample/paging",
+      "subMenuList": [
+        {
+          "name": "Basic Paging",
+          "url": "/sample/paging/paging01"
+        }
+      ]
+    },
+    {
+      "name": "Grid",
+      "url": "/sample/grid",
+      "subMenuList": [
+        {
+          "name": "Basic Grid",
+          "url": "/sample/grid/grid01"
+        }
+      ]
+    },
+    {
+      "name": "File",
+      "url": "/sample/file",
+      "subMenuList": [
+        {
+          "name": "Basic File",
+          "url": "/sample/file/file01"
+        }
+      ]
+    },
+    {
+      "name": "Form",
+      "url": "/sample/form",
+      "subMenuList": [
+        {
+          "name": "Basic Search Form",
+          "url": "/sample/form/form01"
+        },
+        {
+          "name": "Basic Dashboard Form",
+          "url": "/sample/form/form02"
+        }
+      ]
+    },
+    {
+      "name": "Socket",
+      "url": "/sample/socket",
+      "subMenuList": [
+        {
+          "name": "Basic Socket",
+          "url": "/sample/socket/Socket01"
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "url": "/sample/comppage",
+      "subMenuList": [
+        {
+          "name": "Common Code Modal",
+          "url": "/sample/comppage/cmmcd-dtl-modal"
+        }
+      ]
+    }
+  ]
+}

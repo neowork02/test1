@@ -1,0 +1,110 @@
+// colors
+// colors - light
+$light-body: #f0f0f0b4;
+$light-body-deep: #ffffff;
+$light-nav: #f2f4f8;
+$light-location: $light-body;
+$light-nav-inner: #ebeef4;
+$light-nav-on: #dfe4ee;
+$light-btns: #f4f4f4;
+$light-btn-deep: #999eab;
+$light-form: #e6eef8;
+$light-table-header: $light-nav;
+$light-pop-table-btn: $light-table-header;
+// colors - light color(txt)
+$light-txt: #222222;
+$light-txt-grey: #666666;
+$light-txt-grey-light: #999999;
+// colors - light border
+$light-border: #cccccc;
+$light-border-light: #e4e4e4;
+$light-border-light2: #c7d0dc;
+// colors - light pop
+$light-pop: $light-body-deep;
+
+// colors - table
+$light-row-hover: $light-nav;
+
+// colors - dark
+$dark-body: #313338;
+$dark-nav: #3c3f45;
+$dark-location: $dark-nav;
+$dark-nav-inner: #43474d;
+$dark-nav-on: #4f545b;
+$dark-btn-deep: #415471;
+$dark-form: #43474d;
+$dark-table-header: $dark-nav;
+// colors - dark color(txt)
+$dark-txt: #ffffff;
+$dark-txt-grey: #cccccc;
+$dark-txt-grey-light: $dark-txt-grey;
+// colors - dark border
+$dark-border: $dark-body;
+$dark-border-light: #51555d;
+$dark-border-btn: #666b75;
+// colors - dark pop
+$dark-pop: #36393e;
+$dark-pop-table-btn: $dark-table-header;
+
+// colors - table
+$dark-row-hover: #2b2d31;
+
+// colors - common
+$header: #313338;
+$deep: #313338;
+$place: #adb5bd5b;
+$white: #ffffff;
+
+// colors - highlight
+$high-red: #ff6565;
+$high-green: #21b3c0;
+$high-green2: #239faa;
+
+$high-blue: #1c7fdb;
+$high-blue2: #1d62a3;
+$high-blue3: #4d8fcc;
+$check-box: $high-blue;
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+// stylelint-disable
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$btn-primary-bg: $gray-300;
+$btn-primary-color: $blue;
+$border-radius-base: 0.25rem !default;
+$gray-lighter: $gray-100;
+$gray-light: #dee2e6 !default;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;

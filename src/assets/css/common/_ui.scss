@@ -1,0 +1,1224 @@
+.w-full {
+  width: 100%;
+}
+// btn
+.btn {
+  @include flex-c;
+  min-width: 80px;
+  height: 28px;
+
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 4px 6px;
+  background-color: var(--color-grey-light);
+
+  // bg color
+  &.deep {
+    color: #fff;
+    background-color: var(--bg-btn-deep);
+  }
+  &.blue {
+    color: #fff;
+    background-color: $high-blue;
+  }
+  &.yellow {
+    color: #fff;
+    background-color: $yellow;
+  }
+  &.blue2 {
+    color: #fff;
+    background-color: $high-blue2;
+  }
+  &.green {
+    color: #fff;
+    background-color: $high-green;
+  }
+  &.grey {
+    color: #fff;
+    background-color: #4e4e4e;
+  }
+
+  &.line {
+    background-color: transparent;
+    border: 1px solid var(--border-light2);
+    min-width: 50px;
+  }
+
+  // size
+  &.small {
+    min-width: 60px;
+    height: 28px;
+    font-size: $small;
+    font-weight: normal;
+  }
+
+  &.ex-small {
+    min-width: 40px;
+    height: 24px;
+    font-size: $small;
+    font-weight: normal;
+  }
+
+  i {
+    margin-right: 4px;
+  }
+  .after {
+    margin: 0 0 0 4px;
+  }
+  .fa-arrow-down,
+  .fa-arrow-up {
+    font-size: $ex-small;
+  }
+}
+
+// ellipsis
+.ellipsis {
+  @include ellipsis(1, 1em);
+}
+// input
+.input-wrap {
+  @include flex-s-c;
+  height: 28px;
+  border: 1px solid var(--border);
+  background-color: var(--bg-body);
+
+  input[type="text"],
+  input[type="time"],
+  input[type="number"] {
+    width: 100%;
+    height: 100%;
+
+    &::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+    }
+
+    &:disabled {
+      opacity: 0.25;
+    }
+  }
+
+  .input-addon {
+    @include flex-c;
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+  }
+
+  &.light {
+    background-color: var(--border-light);
+  }
+}
+.date-wrap {
+  @include flex-s-c;
+  flex: 1;
+
+  & > div {
+    flex: 1 auto;
+  }
+
+  &.flex-none {
+    & > div {
+      flex: none;
+    }
+  }
+
+  .input-wrap {
+    // min-width: 100px;
+  }
+  .dash {
+    @include flex-c;
+    width: 20px;
+    flex: none;
+  }
+
+  .input-group {
+    @include flex-s-c;
+    position: relative;
+    height: 28px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-body);
+
+    input {
+      width: 100%;
+      height: 100%;
+    }
+    .input-group-addon {
+      padding: 10px;
+    }
+  }
+}
+
+// icon
+.icon {
+  display: inline-flex;
+
+  &.noti {
+    @include on-icon(15, 16, "noti");
+  }
+  &.menu {
+    @include bg(18, 12, $icon + "menu.png");
+  }
+  &.setting {
+    @include bg(16, 16, $icon + "setting.png");
+  }
+  &.info {
+    @include bg(18, 18, $icon + "info.png");
+  }
+}
+
+.cont-title {
+  @include flex-between-c;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+  padding: 8px 0 8px;
+  min-height: 42px;
+
+  &:first-child {
+    border: 0;
+    padding-top: 0;
+  }
+
+  & > div:first-child {
+    font-size: 16px;
+
+    i {
+      color: var(--color-grey);
+    }
+  }
+
+  & > div:nth-child(2) {
+    @include flex;
+
+    button {
+      margin-left: 4px;
+    }
+  }
+}
+
+// hide
+.hide {
+  @include hide;
+}
+
+// search
+.search-wrap {
+  padding-left: 8px;
+
+  label {
+    @include flex-s-c;
+    color: var(--color-grey);
+  }
+
+  input[type="text"] {
+    margin-left: 8px;
+  }
+
+  button.btn.green {
+    min-width: 40px;
+    height: 100%;
+  }
+}
+
+// btn/tab
+.btns-area-wrap {
+  @include flex;
+  margin-top: 10px;
+
+  & > {
+    button,
+    a,
+    div {
+      @include flex-c;
+      flex: 1;
+      // min-width: 180px;
+      height: 50px;
+      padding: 0 4px;
+      background-color: var(--btns-area);
+      border: 1px solid var(--btns-area-border);
+      border-right: 0;
+
+      &:last-child {
+        border-right: 1px solid var(--btns-area-border);
+      }
+
+      &.on {
+        background-color: var(--btns-area-on);
+      }
+    }
+  }
+}
+
+// form
+.form-wrap {
+  border: 1px solid var(--border-light2);
+  background-color: var(--bg-form);
+  padding: 14px;
+
+  .btn.submit-btn {
+    margin-left: 5px;
+  }
+
+  &.form-small {
+    margin: 0 0 10px;
+    padding: 0 2px 0 6px;
+  }
+
+  .label-wrap {
+    .label-line {
+      border-bottom: 1px solid var(--border-light2);
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .throw {
+        margin: 4px;
+      }
+    }
+    .label-tit {
+      min-width: 80px;
+      line-height: 1.5em;
+
+      &.labe-top {
+        align-self: baseline;
+        font-weight: bold;
+      }
+
+      &.label-w-auto {
+        min-width: auto;
+        padding-right: 10px;
+      }
+      &.label-small {
+        min-width: 50px;
+        padding: 0 5px;
+      }
+    }
+
+    .label-list {
+      @include flex-s-c;
+      flex-wrap: wrap;
+      flex: 1;
+
+      & >,
+      .line {
+        label {
+          @include list-space(10);
+          @include list-space(5, $x: "bottom");
+
+          @include flex-s-c;
+          display: inline-flex;
+
+          span {
+            margin: 0 6px;
+          }
+        }
+
+        .around {
+          @include flex-around;
+          flex: 1;
+
+          label {
+            margin: 0;
+            font-size: $ex-small;
+
+            span {
+              margin-left: 4px;
+            }
+          }
+
+          .btn {
+            @include list-space(2);
+            min-width: 24px;
+            height: 24px;
+            flex: 1;
+            font-size: $ex-small;
+
+            &.fa {
+              flex: none;
+            }
+          }
+
+          .etc {
+            @include flex-s-c;
+            position: relative;
+            margin-left: 5px;
+
+            button {
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .line.full {
+        @include flex-s-c;
+
+        label {
+          flex: 1;
+          white-space: nowrap;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &.label-s-none {
+        label {
+          margin-bottom: 0;
+        }
+      }
+
+      .input-wrap,
+      select {
+        flex: 1;
+      }
+
+      .line {
+        flex: 1 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    select {
+      width: 100%;
+    }
+  }
+
+  .label-row {
+    @include flex-s-c;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .label-tit {
+      padding-left: 10px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    &.label-between {
+      justify-content: space-between;
+
+      & > div {
+        @include flex-s-c;
+      }
+    }
+
+    &.right {
+      @include flex-e-c;
+    }
+    &.full {
+      .label-filler {
+        @include flex-s-c;
+        flex: 1;
+
+        label {
+          @include list-space(20);
+          flex: 1;
+          min-width: 120px;
+        }
+      }
+      .label-tit {
+        white-space: nowrap;
+      }
+      .label-list {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  .label-filler {
+    @include flex-s-c;
+
+    .label-list {
+      padding: 6px;
+      border: 1px solid var(--border);
+    }
+  }
+}
+.form-wrap + .scroll-wrap {
+  margin-top: 10px;
+}
+
+// scroll
+.scroll-wrap {
+  @include full;
+  position: relative;
+
+  & > .scroll-inner {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+// tree
+.form-wrap + .tree-wrap {
+  margin-top: 10px;
+}
+.tree-wrap {
+  @include full;
+  border: 1px solid var(--border-light);
+
+  & > div {
+    position: relative;
+    margin: 10px;
+    flex: 1;
+
+    &:first-child {
+      margin-bottom: 0;
+      border-bottom: 1px solid var(--border-light);
+
+      .scroll-inner {
+        bottom: 4px;
+      }
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .small {
+    height: 140px;
+    flex: none;
+  }
+
+  .treeview {
+    background-color: transparent !important;
+    height: auto !important;
+    overflow: visible !important;
+
+    .tree-wholerow-hovered,
+    .tree-hovered {
+      background-color: var(--btns-area);
+    }
+
+    .tree-wholerow-clicked {
+      background-color: transparent;
+    }
+  }
+}
+.btn-bottom {
+  @include flex;
+  padding-top: 10px;
+
+  &.space {
+    padding: 10px 0;
+  }
+
+  button,
+  a {
+    margin: 0 2px;
+  }
+  label {
+    @include flex-s-c;
+
+    span {
+      margin-left: 4px;
+    }
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.right {
+    justify-content: flex-end;
+
+    button,
+    a {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &.between {
+    @include flex-between-c;
+  }
+
+  &.space-none {
+    padding: 0;
+  }
+}
+.form-wrap + .btn-bottom:not(.flex-btn-none) {
+  .btn {
+    width: 15%;
+    min-width: auto;
+  }
+}
+
+// table
+.table-tit {
+  @include flex-between-c;
+  padding: 10px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &.space {
+    padding-bottom: 18px;
+  }
+
+  .btn-bottom {
+    padding: 0;
+  }
+
+  .desc {
+    font-size: $small;
+  }
+}
+.table-outer {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &.line {
+    border-bottom: 1px solid var(--border-light);
+  }
+  &.flex {
+    @include flex;
+
+    & > div {
+      @include full;
+      @include list-space(10);
+      flex: 1;
+    }
+
+    .table-wrap {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .map {
+      flex: 1;
+      width: 550px;
+    }
+  }
+  &.space-none {
+    margin: 0;
+    padding: 0;
+  }
+
+  &.full {
+    flex: 1;
+  }
+}
+.table-wrap {
+  border: 1px solid var(--border-light2);
+  background-color: var(--bg-form);
+  padding: 14px;
+  margin-bottom: 5px;
+
+  &.space-none {
+    margin: 0;
+  }
+
+  .btn-full {
+    padding: 0 0 0 5px !important;
+
+    button,
+    a {
+      width: 100%;
+      height: 64px;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    padding: 0 8px;
+    white-space: nowrap;
+    font-weight: normal;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  .top {
+    vertical-align: top;
+    padding-top: 6px;
+  }
+
+  tbody {
+    th {
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 4px 5px;
+    }
+
+    .group {
+      th,
+      td {
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  &.th-w {
+    tbody {
+      th {
+        width: 64px;
+      }
+    }
+  }
+  .dash {
+    text-align: center;
+    margin: 0 4px;
+  }
+  select {
+    width: 100%;
+    min-width: 120px;
+
+    &.inline {
+      width: auto;
+    }
+  }
+  textarea {
+    width: 100%;
+  }
+}
+.table-data {
+  table {
+    thead {
+      th {
+        padding: 6px 0;
+        background-color: var(--bg-table-header);
+      }
+    }
+    th,
+    td {
+      text-align: center;
+      font-weight: normal;
+      border-right: 1px solid var(--border-light2);
+      border-bottom: 1px solid var(--border-light2);
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    th,
+    td {
+      padding: 14px 8px;
+      background-color: var(--border);
+    }
+  }
+
+  .btn-data-type {
+    @include flex-c;
+
+    span {
+      margin: 0 10px;
+      min-width: 20%;
+      font-size: 15px;
+    }
+  }
+}
+.data-table {
+  width: 100%;
+  border: 1px solid var(--border-light);
+
+  th {
+    background-color: var(--bg-form);
+  }
+  tbody {
+    th {
+      background-color: #43474d4b;
+      font-weight: normal;
+    }
+    th,
+    td {
+      font-size: 13px;
+    }
+  }
+
+  &.th-right {
+    tbody {
+      th {
+        text-align: right;
+      }
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid var(--border-light);
+    min-width: 80px;
+    height: 38px;
+    padding: 8px;
+  }
+  td {
+    min-width: 110px;
+  }
+
+  .or {
+    @include flex;
+
+    button {
+      flex: 1;
+      margin: 0 1px;
+    }
+  }
+
+  .btn {
+    height: 25px;
+  }
+}
+
+// file
+.file-upload-wrap {
+  @include flex-s-c;
+  position: relative;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .fa-file-o {
+    font-size: $depth3;
+    margin-right: 10px;
+  }
+  button.fa {
+    @include flex-c;
+    width: 34px;
+    height: 28px;
+    color: #fff;
+    background-color: $high-green;
+  }
+
+  .input-wrap {
+    min-width: 350px;
+  }
+
+  input {
+    cursor: pointer;
+    padding-left: 20px;
+    font-size: 12px;
+  }
+
+  input[type="file"] {
+    @include flex-s-c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 4px;
+    padding-left: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    &::-webkit-file-upload-button {
+      width: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+// paging
+.paging-wrap {
+  @include flex-c;
+  margin: 10px 0;
+
+  .btn {
+    min-width: 30px;
+    height: 30px;
+    border: 1px solid var(--paging-btn-border);
+    background-color: var(--bg-body);
+    margin: 0 5px;
+    padding: 4px;
+
+    &[type="submit"] {
+      font-size: 0;
+
+      &:nth-child(1) {
+        &::after {
+          @include awesome("\f100");
+          font-size: 12px;
+        }
+      }
+      &:nth-child(2) {
+        &::after {
+          @include awesome("\f104");
+          font-size: 12px;
+        }
+      }
+      &:nth-last-child(1) {
+        &::after {
+          @include awesome("\f101");
+          font-size: 12px;
+        }
+      }
+      &:nth-last-child(2) {
+        &::after {
+          @include awesome("\f105");
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .btn-gray.focus,
+  .btn-gray:focus {
+    background-color: var(--paging-btn-on);
+    border-color: var(--paging-btn-on-border);
+    color: var(--paging-btn-on-color);
+  }
+}
+
+// vsa list
+.vsa-list {
+  .vsa-item__heading {
+    .vsa-item__trigger {
+      width: 100%;
+
+      .vsa-item__trigger__content {
+        @include flex-between-c;
+        background-color: var(--bg-form);
+        height: 28px;
+        padding: 0 8px;
+
+        & > div {
+          @include flex-s-c;
+
+          .fa-angle-down {
+            @include transition-setting;
+            font-size: $depth3;
+          }
+        }
+      }
+    }
+
+    &[data-vsa-active="true"] {
+      .vsa-item__trigger {
+        .vsa-item__trigger__content {
+          background-color: $light-txt;
+
+          .fa-angle-down {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .colors {
+    @include bx(14, 14);
+    border: 1px solid #000;
+    background-color: #dbdbdb;
+    margin: 0 8px;
+  }
+
+  .vsa-tit {
+    label {
+      @include flex-s-c;
+
+      input {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+.list-common {
+  li {
+    position: relative;
+    border-bottom: 1px solid #272727;
+
+    &:last-child {
+      border: 0;
+    }
+
+    .cont {
+      @include flex-between-c;
+      padding: 4px 10px;
+
+      & > div {
+        @include flex-s-c;
+      }
+      .tit {
+        padding: 0 4px;
+      }
+      .btns {
+        button {
+          margin: 0 6px;
+        }
+      }
+    }
+
+    label {
+      @include flex-s-c;
+      flex: 1;
+      font-size: $small;
+      min-height: 34px;
+      padding: 0 10px;
+      cursor: pointer;
+
+      input {
+        margin-right: 6px;
+      }
+
+      &:hover {
+        background-color: #{$high-blue3};
+      }
+
+      & > span {
+        @include flex-s-c;
+        line-height: 0;
+      }
+    }
+
+    .right {
+      @include flex-c;
+      position: absolute;
+      top: 0;
+      right: 4px;
+      bottom: 0;
+    }
+  }
+
+  &.list-common-bg {
+    background-color: #3d3d3d;
+  }
+}
+
+.layer-border {
+  border: 1px solid var(--border-light2);
+  padding: 10px;
+
+  &.space {
+    margin: 5px 0;
+  }
+}
+
+.layer-between {
+  @include flex();
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  .layer-left {
+    @include flex($d: column);
+    padding-right: 5px;
+  }
+  .layer-right {
+    @include flex($d: column);
+    padding-left: 5px;
+  }
+  .layer-block,
+  .layer-bottom {
+    @include flex($d: column, $wrap: wrap);
+    flex: 1 100%;
+  }
+  .bottom-space-page {
+    padding-bottom: 51px;
+  }
+
+  .layer-full {
+    & > div:not(.paging-outer):not(.layer-tit):not(.table-tit) {
+      flex: 1;
+    }
+  }
+
+  & > div {
+    flex: 1;
+
+    .form-wrap {
+      flex: 1;
+    }
+  }
+
+  .layer-tit {
+    padding: 10px 0;
+  }
+
+  .map-absolute {
+    flex: 1;
+  }
+
+  &.flex-none {
+    flex: none;
+  }
+}
+
+.input-wrap-align {
+  @include flex-around;
+  line-height: 1;
+
+  label {
+    margin-right: 28px;
+    cursor: pointer;
+  }
+
+  &.checkbox {
+    & > div {
+      @include flex;
+      flex-wrap: wrap;
+
+      label {
+        @include flex;
+        @include ellipsis(1, 1em);
+        width: 33.3%;
+        margin-bottom: 15px;
+        margin-right: 0;
+
+        input {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
+.input-wrap-align2 {
+  .radio,
+  .checkbox {
+    & > div {
+      @include flex-between;
+
+      line-height: 0;
+    }
+  }
+  label {
+    @include flex-s-c;
+    display: inline-flex;
+  }
+  input {
+    margin: 0 4px;
+  }
+}
+.input-bg-wrap {
+  background-color: var(--bg-body);
+  border: 1px solid var(--border-light2);
+  padding: 10px;
+
+  &.input-bx {
+    margin: 0;
+  }
+
+  &.space {
+    margin: 4px 0;
+  }
+
+  &.align-around {
+    @include flex-around;
+    width: 100%;
+
+    label {
+      @include flex-c;
+      display: inline-flex;
+      margin: 0 5px;
+
+      input {
+        margin: 0 3px;
+      }
+    }
+  }
+}
+.input-bx {
+  @include flex-s-c;
+  flex: 1;
+  margin: 0 10px;
+
+  label {
+    @include flex-s-c;
+    @include list-space(15);
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  input {
+    margin-right: 5px;
+  }
+
+  .checkbox {
+    & > div {
+      @include flex-s-c;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.map-absolute {
+  position: relative;
+  overflow: hidden;
+
+  .maps {
+    @include center-posi($p: absolute);
+    min-width: 100%;
+    min-height: 100%;
+
+    &.fit {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.map-center {
+    background-color: var(--bg-body);
+    border: 1px solid var(--border-light);
+
+    .maps {
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      width: 60%;
+      height: 90%;
+    }
+  }
+}
+
+.labels {
+  @include flex-s-c;
+
+  label {
+    white-space: nowrap;
+    min-width: 100px;
+    margin: 0 10px 0 20px;
+    cursor: pointer;
+  }
+}
+.labels-wrap {
+  .labels {
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.date-all-wrap {
+  @include flex;
+
+  .labels {
+    align-self: flex-start;
+    padding: 15px 0 0;
+  }
+  .date-wrap {
+    margin: 5px 1px 1px;
+  }
+}

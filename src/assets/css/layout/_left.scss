@@ -1,0 +1,160 @@
+// left fixed
+.left-fixed {
+  .left-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+}
+
+// navigation
+.nav-wrap {
+  $h: 50px;
+
+  height: 100%;
+  padding-top: $h;
+
+  .nav-top {
+    @include flex-s-c;
+    @include t-all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: $h;
+    padding: 0 20px;
+    background-color: $high-green;
+
+    .nav-title {
+      @include t-all;
+      color: $light-body;
+      margin-left: 20px;
+      white-space: nowrap;
+      opacity: 0;
+    }
+
+    .icon {
+      flex: none;
+    }
+  }
+
+  .nav-list-wrap {
+    @include t-all;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg-nav);
+    border-right: 1px solid var(--border);
+    overflow: hidden;
+
+    li {
+      &,
+      .tit {
+        color: var(--color-grey);
+        white-space: nowrap;
+      }
+
+      a {
+        @include flex-between-c;
+        transition: all 0.2s;
+        position: relative;
+        height: $h;
+        padding: 0 20px;
+        cursor: pointer;
+      }
+    }
+    & > ul > li {
+      transition: all 0.3s;
+      max-height: $h;
+      overflow: hidden;
+
+      &.on {
+        max-height: 400px;
+        background-color: var(--bg-nav-inner);
+      }
+    }
+    & > ul > li {
+      border-bottom: 1px solid var(--border-light);
+    }
+    & > ul > li > .tit {
+      background-color: var(--bg-nav);
+
+      &::after {
+        @include awesome("\f105");
+        color: var(--color-grey);
+      }
+
+      &.active {
+        background-color: var(--bg-nav-inner);
+        font-weight: 700;
+      }
+      &.router-link-exact-active {
+        color: var(--color);
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 3px;
+          height: 100%;
+          background-color: $high-blue;
+        }
+      }
+    }
+    ul ul {
+      // display: none;
+    }
+    .open {
+      & + ul {
+        display: block;
+      }
+    }
+    ul ul li a.router-link-exact-active {
+      background-color: var(--bg-nav-on);
+      color: var(--color);
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: $high-blue;
+      }
+    }
+    ul ul li a {
+      background-color: var(--bg-nav-on);
+      padding-left: 25px;
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+.left-open {
+  .nav-wrap {
+    .nav-top,
+    .nav-list-wrap {
+      width: $nav-width;
+    }
+
+    &.small {
+      .nav-top,
+      .nav-list-wrap {
+        width: $nav-width-small;
+      }
+    }
+
+    .nav-top {
+      .nav-title {
+        opacity: 1;
+      }
+    }
+  }
+
+  .location-wrap {
+    margin-left: 0;
+  }
+}
